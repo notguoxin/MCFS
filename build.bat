@@ -1,6 +1,8 @@
 @echo off
 setlocal
 
+pip install -r ./req.txt
+
 REM Delete old installer executable if it exists
 if exist installer.exe (
     del installer.exe /s /q
