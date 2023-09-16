@@ -14,17 +14,13 @@ jobs:
     - name: Run build.bat
       run: .\build.bat
 
-    - name: Extract branch or tag name
-      id: extract_ref
-      run: echo "::set-output name=ref::${GITHUB_REF#refs/*/}"
-
     - name: Create Release
       id: create_release
       uses: actions/create-release@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        tag_name: ${{ steps.extract_ref.outputs.ref }}
+        tag_name: 1.0.0
         release_name: Release ${{ steps.extract_ref.outputs.ref }}
         draft: false
         prerelease: false
