@@ -1,2 +1,2 @@
-# MCD
+# MCFS
 Minecraft + Mcreator Auto Installer
