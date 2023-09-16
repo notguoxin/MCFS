@@ -1,6 +1,8 @@
 @echo off
 setlocal
-
+echo.
+pip install pyinstaller
+echo .
 pip install -r ./req.txt
 
 REM Delete old installer executable if it exists
